@@ -1,7 +1,7 @@
 import { signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js";
 import { auth } from "../../firebaseConfig.js";
 
-export const signInUserWithGoogle = async () => {
+export async function signInUserWithGoogle() {
     /*
     signs in user and signs up user, if they are signing up a doc in the db will be created for the user
     */
@@ -16,4 +16,4 @@ export const signInUserWithGoogle = async () => {
         console.error(error);
         return "error";
     }
-};
+}
