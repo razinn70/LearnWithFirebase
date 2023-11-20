@@ -12,12 +12,18 @@ auth.onAuthStateChanged(function (user) {
     }
 });
 
-const handleGoogleSignUp = async () => {
+async function handleGoogleSignUp(){
+
     const response = await signInUserWithGoogle();
 
+    // if an error occurs duing the sign-in process
     if (response === "error") {
         console.log("Error, user not signed in with Google");
+    // if the user has successfully signed in
+    } else {
+        console.log("success, user has signed in with Google");
     }
+    
 };
 
 const testButton = document.getElementById("button");
